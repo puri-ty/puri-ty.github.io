@@ -6,17 +6,29 @@
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
     <script src='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.js'></script>
     <link href='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.css' rel='stylesheet' />
-    <style>
-        body { margin:0; padding:0; }
-        #map { position:absolute; top:0; bottom:0; width:100%; }
-    </style>
+    <link rel="stylesheet" href="//cdn.web-fonts.ge/fonts/alk-rex-bold/css/alk-rex-bold.min.css">
+    <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
-<div id="intro">
-    
+<div id="intro" data-scroll-container>
+    <div  data-scroll-section style="background-color: white; height: 100vh">
+<p>შენც, როგორც ყველას, გაქვს ქალაქში საყვარელი გზა. Ამ გზას ირჩევ იმიტომ,Რომ ყველაზე მოკლეა,<br>
+    ლამაზისაყვარელი ხე გხვდება, რომელიღაც ფანჯრის რაფაზე კატაა წამოწოლილი ან იმიტომ, რომ ამ გზაზე მზე ზუსტად სწორი კუთხიდან გეცემა ხოლმე.
+
+    Თუმცა, დროსთან ერთად ეს გზა შეიძლება შეიცვალოს.
+    ხე მოჭრან
+    კატა გაიქცეს
+    მზის სხივები კორპუსებმა გადაფაროს
+    ან ყველაფერი იგივე დარჩეს, მაგრამ გზაზე გადაგხდეს ამბავი ისტორია, რომელიც მას ამ გზას გაუვალს გახდის.
+
+</p>
+    </div>
+    <div data-scroll-section style="height: 100vh">
+
+    </div>
 </div>
 <div id='map'></div>
-
 <script>
     L.mapbox.accessToken = 'pk.eyJ1Ijoic29waGllZ3YiLCJhIjoiY2xkY3F2M2hiMGQ0NjNubnJlenpubXl5eCJ9.lVYFYxvKsl89G_oF850jsw';
     var map = L.map('map').setView([41.7151, 44.8271], 13);
@@ -31,5 +43,13 @@
             attribution: '© <a href="https://www.mapbox.com/contribute/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         }).addTo(map);
 </script>
+<script src="locomotive-scroll.min.js"></script>
+<script>
+    (function () {
+        var scroll = new LocomotiveScroll({smooth:true});
+
+    })();
+</script>
 </body>
 </html>
+

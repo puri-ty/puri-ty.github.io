@@ -1,20 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset=utf-8 />
+    <meta charset="utf-8"/>
     <title>Add styles made with Mapbox Studio to a Leaflet map</title>
-    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no'/>
     <script src='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.js'></script>
-    <link href='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.css' rel='stylesheet' />
+    <link href='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.css' rel='stylesheet'/>
     <link rel="stylesheet" href="//cdn.web-fonts.ge/fonts/alk-rex-bold/css/alk-rex-bold.min.css">
+    <link rel="stylesheet" href="locomotive-scroll.css">
+
     <link rel="stylesheet" href="style.css">
 
 </head>
 <body>
-<div id="intro" data-scroll-container>
-    <div  data-scroll-section style="background-color: white; height: 100vh">
-<p>შენც, როგორც ყველას, გაქვს ქალაქში საყვარელი გზა. Ამ გზას ირჩევ იმიტომ,Რომ ყველაზე მოკლეა,<br>
-    ლამაზისაყვარელი ხე გხვდება, რომელიღაც ფანჯრის რაფაზე კატაა წამოწოლილი ან იმიტომ, რომ ამ გზაზე მზე ზუსტად სწორი კუთხიდან გეცემა ხოლმე.
+<div data-scroll-container>
+    <div id="intro">
+        <div class="section" data-scroll-section>
+            <div id="p1"> შენც, როგორც ყველას, გაქვს<br>ქალაქში საყვარელი გზა.</div>
+            <div class="heroessquare" data-scroll data-scroll-sticky data-scroll-target="#intro"
+                 style="background-image:url('map_sketch1.PNG')"></div>
+        </div>
+        <div class="section" id="section2" data-scroll-section>
+            <div data-scroll style="display:flex">
+                <div data-scroll data-scroll-speed="4" data-scroll-repeat="true" class="f100">ამ</div>
+                <div data-scroll data-scroll-speed="4" data-scroll-repeat="true" class="f400">გზას</div>
+            </div>
+            <div data-scroll data-scroll-speed="2" data-scroll-repeat="true" class="f100">ირჩევ იმიტომ,</div>
+            <div data-scroll data-scroll-speed="2" class="f130">რომ ყველაზე მოკლეა,</div>
+        </div>
+
+
+        <div class="section" data-scroll-section>
+            <div class="f130">ლამაზი ხე გხვდება, რომელიღაც ფანჯრის რაფაზე
+                კატაა წამოწოლილი
+            </div>
+        </div>
+        <div class="section" data-scroll-section>
+            <div class="f130"> ან იმიტომ, რომ ამ გზაზე მზე ზუსტად სწორი
+                 კუთხით გეცემა ხოლმე.
+        </div>
+    </div>
 
     Თუმცა, დროსთან ერთად ეს გზა შეიძლება შეიცვალოს.
     ხე მოჭრან
@@ -22,16 +47,20 @@
     მზის სხივები კორპუსებმა გადაფაროს
     ან ყველაფერი იგივე დარჩეს, მაგრამ გზაზე გადაგხდეს ამბავი ისტორია, რომელიც მას ამ გზას გაუვალს გახდის.
 
-</p>
-    </div>
-    <div data-scroll-section style="height: 100vh">
-
-    </div>
 </div>
-<div id='map'></div>
+<div class="section" data-scroll-section>
+
+</div>
+<div id='map' data-scroll-sticky></div>
+</div>
+
 <script>
     L.mapbox.accessToken = 'pk.eyJ1Ijoic29waGllZ3YiLCJhIjoiY2xkY3F2M2hiMGQ0NjNubnJlenpubXl5eCJ9.lVYFYxvKsl89G_oF850jsw';
-    var map = L.map('map').setView([41.7151, 44.8271], 13);
+    var map = L.map('map', {
+        center: [41.7151, 44.8271],
+        zoom: 13,
+        scrollWheelZoom: false,
+    });
 
     // Add tiles from the Mapbox Static Tiles API
     // (https://docs.mapbox.com/api/maps/#static-tiles)
@@ -46,7 +75,7 @@
 <script src="locomotive-scroll.min.js"></script>
 <script>
     (function () {
-        var scroll = new LocomotiveScroll({smooth:true});
+        var scroll = new LocomotiveScroll({smooth: true});
 
     })();
 </script>

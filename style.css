@@ -16,4 +16,35 @@ body {
     width: 100vw;
     z-index: 100;
     font-family: "ALK Rex Bold", sans-serif;
+    background-color: white;
+}
+.section {
+    height: 100vh;
+
+}
+.heroessquare{
+    height: 100VH;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5;
+}
+#p1{
+    font-size: 100px;
+    margin: 121px 0 0 129px;
+}
+
+#section2 {
+    padding: 114px 0 0 125px;
+}
+
+.f100 {
+    font-size: 100px;
+}
+
+.f400 {
+    font-size: 400px;
+}
+
+.f130 {
+    font-size: 130px;
 }

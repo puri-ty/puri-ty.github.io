@@ -12,11 +12,16 @@ body {
     z-index: 0;
 }
 #intro{
-    position: absolute;
+
     width: 100vw;
-    z-index: 100;
     font-family: "ALK Rex Bold", sans-serif;
-    background-color: white;
+
+}
+#scroll{
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    pointer-events: none;
 }
 .heroessquare{
     height: 100VH;
@@ -26,6 +31,7 @@ body {
 }
 .section {
     height: 100vh;
+    background-color: white;
 
 }
 .f100 {
@@ -48,22 +54,26 @@ body {
 #section2 {
     padding: 114px 0 0 125px;
 }
-#lamazixe {
-    text-align:center;
-    padding:250px 0 0 0;
-}
-#kata{
-    text-align:center;
-    padding:250px 0 0 0;
-}
-#mze{
-    text-align:center;
-    padding:250px 0 0 0;
-}
 #gzasheicvalos{
     padding:178px 215px
 }
-#xemochran{
+#center{
     text-align:center;
     padding:250px 0 0 0;
+}
+
+.story-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity .5s;
+}
+
+.story-wrapper.show {
+    pointer-events: all;
+    opacity: 1;
 }

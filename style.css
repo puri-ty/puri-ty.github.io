@@ -18,25 +18,16 @@ body {
     font-family: "ALK Rex Bold", sans-serif;
     background-color: white;
 }
-.section {
-    height: 100vh;
-
-}
 .heroessquare{
     height: 100VH;
     background-size: cover;
     background-position: center;
     opacity: 0.5;
 }
-#p1{
-    font-size: 100px;
-    margin: 121px 0 0 129px;
-}
+.section {
+    height: 100vh;
 
-#section2 {
-    padding: 114px 0 0 125px;
 }
-
 .f100 {
     font-size: 100px;
 }
@@ -47,4 +38,32 @@ body {
 
 .f130 {
     font-size: 130px;
+}
+
+#p1{
+    font-size: 100px;
+    margin: 121px 0 0 129px;
+}
+
+#section2 {
+    padding: 114px 0 0 125px;
+}
+#lamazixe {
+    text-align:center;
+    padding:250px 0 0 0;
+}
+#kata{
+    text-align:center;
+    padding:250px 0 0 0;
+}
+#mze{
+    text-align:center;
+    padding:250px 0 0 0;
+}
+#gzasheicvalos{
+    padding:178px 215px
+}
+#xemochran{
+    text-align:center;
+    padding:250px 0 0 0;
 }

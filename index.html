@@ -89,18 +89,26 @@
             attribution: '© <a href="https://www.mapbox.com/contribute/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         }).addTo(map);
 //    map.addLayer(overlay);
-    let points = [
-        {lat: 41.678767, lng: 44.921374}
+   // let points = [
+       // {lat: 41.678767, lng: 44.921374}
     ];
-    let markers = [];
-    for (let i = 0; i < points.length; i++) {
-        markers[i] = L.marker([points[i].lat, points[i].lng]).addTo(map);
-        markers[i].bindPopup(points[i].popup);
+    //let markers = [];
+    //for (let i = 0; i < points.length; i++) {
+        //markers[i] = L.marker([points[i].lat, points[i].lng]).addTo(map);
+        //markers[i].bindPopup(points[i].popup);
         let point = points[i];
         markers[i].on("click", function (e) {
             overlay.setUrl(point.url);
             overlay.getElement().play();
         });
+        let pin = L.icon({
+            iconUrl: 'marker.png',
+
+            iconSize:     [38, 95], // size of the icon
+            iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
+            popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+        });
+    L.marker([41.678767, 44.921374], {icon: pin}).addTo(map);
     }
 </script>
 <script src="locomotive-scroll.min.js"></script>

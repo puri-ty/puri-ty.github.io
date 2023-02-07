@@ -69,47 +69,48 @@
     <div id='map' data-scroll-sticky></div>
 </div>
 <div id="story1" class="story-wrapper">
-
+    <img src="BG_ELENE.png" height="1080" width="1920"/>
+    <div class="close">&times</div>
+    <div class="story-content">
+        <h1>ელენეს ისტორია</h1>
+        <p></p>
+    </div>
 </div>
 <script>
-    L.mapbox.accessToken = 'pk.eyJ1Ijoic29waGllZ3YiLCJhIjoiY2xkY3F2M2hiMGQ0NjNubnJlenpubXl5eCJ9.lVYFYxvKsl89G_oF850jsw';
-    var map = L.map('map', {
-        center: [41.7151, 44.8271],
-        zoom: 13,
-        scrollWheelZoom: false,
-    });
+    let closebtns = document.getElementsByClassName("close");
+    let i;
 
-    // Add tiles from the Mapbox Static Tiles API
-    // (https://docs.mapbox.com/api/maps/#static-tiles)
-    // Tiles are 512x512 pixels and are offset by 1 zoom level
-    L.tileLayer(
-        'https://api.mapbox.com/styles/v1/sophiegv/cldk73rnj002101rn4n8t7rnz/tiles/256/{z}/{x}/{y}@2x?access_token=' + L.mapbox.accessToken, {
-            tileSize: 512,
-            zoomOffset: -1,
-            attribution: '© <a href="https://www.mapbox.com/contribute/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-        }).addTo(map);
-//    map.addLayer(overlay);
-   // let points = [
-       // {lat: 41.678767, lng: 44.921374}
-    ];
+    for (i = 0; i < closebtns.length; i++) {
+        closebtns[i].addEventListener("click", function () {
+            this.parentElement.classList.remove("show");
+        });
+    }
+</script>
+<script src="map.js"></script>
+
+<script>
+    //map.addLayer(overlay);
+    // let points = [
+    // {lat: 41.678767, lng: 44.921374}
+    //];
     //let markers = [];
     //for (let i = 0; i < points.length; i++) {
-        //markers[i] = L.marker([points[i].lat, points[i].lng]).addTo(map);
-        //markers[i].bindPopup(points[i].popup);
-        let point = points[i];
-        markers[i].on("click", function (e) {
-            overlay.setUrl(point.url);
-            overlay.getElement().play();
-        });
-        let pin = L.icon({
-            iconUrl: 'marker.png',
+    //markers[i] = L.marker([points[i].lat, points[i].lng]).addTo(map);
+    //markers[i].bindPopup(points[i].popup);
+    //let point = points[i];
+    //
+    let customIcon = L.icon({
+        iconUrl: 'marker.png',
 
-            iconSize:     [38, 95], // size of the icon
-            iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
-            popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
-        });
-    L.marker([41.678767, 44.921374], {icon: pin}).addTo(map);
-    }
+        iconSize: [65, 65], // size of the icon
+        iconAnchor: [22, 94], // point of the icon which will correspond to marker's location
+        popupAnchor: [-3, -76] // point from which the popup should open relative to the iconAnchor
+    });
+    let marker = L.marker([41.71314827572697, 44.78244991142038], {icon: customIcon}).addTo(map);
+    marker.on("click", function (e) {
+        document.getElementById("story1").classList.add("show")
+    })
+    ;
 </script>
 <script src="locomotive-scroll.min.js"></script>
 <script>
@@ -117,7 +118,6 @@
         var scroll = new LocomotiveScroll({smooth: true});
 
     })();
-
 
 
 </script>

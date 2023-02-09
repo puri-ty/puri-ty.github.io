@@ -28,7 +28,23 @@ const points = [
     {
         coords: [41.69272711880331, 44.815284046136135],
         story: "story2.html"
-    }
+    },
+    {
+        coords: [41.719581, 44.757042],
+        story: "story2.html"
+    },
+    {
+        coords: [41.703041, 44.803021],
+        story: "story2.html"
+    },
+    {
+        coords: [41.714005, 44.811283],
+        story: "story2.html"
+    },
+    {
+        coords: [41.690551, 44.897988],
+        story: "story2.html"
+    },
 
 ]
 for (let i = 0; i < points.length; i++) {

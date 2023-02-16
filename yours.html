@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>დაამატე შენი ისტორია</title>
+    <link rel="stylesheet" href="story.css">
 </head>
 <body>
 
 <img src="addyours.png" height="1080" width="1920"/></body>
 <style>
-    img{
+    img {
         position: fixed;
         top: 0;
         left: 0;
@@ -19,4 +20,11 @@
         z-index: 0;
     }
 </style>
+<div class="close" style="z-index: 100">&times</div>
+<script>
+    let close = document.getElementsByClassName("close");
+    close.addEventListener("click", function () {
+        window.history.back();
+    });</script>
+
 </html>

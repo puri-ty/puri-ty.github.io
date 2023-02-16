@@ -30,20 +30,8 @@ const points = [
         story: "story2.html"
     },
     {
-        coords: [41.719581, 44.757042],
-        story: "story2.html"
-    },
-    {
-        coords: [41.703041, 44.803021],
-        story: "story2.html"
-    },
-    {
-        coords: [41.714005, 44.811283],
-        story: "story2.html"
-    },
-    {
-        coords: [41.690551, 44.897988],
-        story: "story2.html"
+        coords: [41.706073, 44.770683],
+        story: "story3.html"
     },
 
 ]

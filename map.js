@@ -74,13 +74,12 @@ scroll.on('call', function (f, dir) {
                 direction: 'alternate',
                 loop: false
             });
-        } else if(f==='showMap') {
+        } else if (f === 'showMap') {
             document.getElementById('map').style.opacity = (dir === 'enter') ? '1' : '0';
             document.querySelector('.circle').classList.toggle('show');
-        }
-        else if(f==='heroessquareFadeOut' && dir === 'enter') {
+        } else if (f === 'heroessquareFadeOut' && dir === 'enter') {
             document.getElementById('heroessquare').classList.toggle('fade-out');
-        } else if(f==='heroessquare1FadeOut') {
+        } else if (f === 'heroessquare1FadeOut') {
             document.getElementById('heroessquare1').classList.toggle('fade-out');
         } else {
             console.log(f);
@@ -90,7 +89,7 @@ scroll.on('call', function (f, dir) {
 let circle = document.getElementsByClassName("circle");
 let i;
 for (i = 0; i < circle.length; i++) {
-    circle [i].addEventListener("click", function() {
+    circle [i].addEventListener("click", function () {
         window.location = "yours.html";
     });
 }

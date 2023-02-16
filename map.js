@@ -99,3 +99,17 @@ scroll.on('call', function (f, dir) {
         }
     }
 );
+let circle = document.getElementsByClassName("circle");
+let i;
+for (i = 0; i < circle.length; i++) {
+    circle [i].addEventListener("click", function() {
+        window.location = "yours.html";
+    });
+}
+
+const toggleSound = function () {
+    let audio = document.querySelector('audio');
+    audio.muted = !audio.muted;
+}
+
+history.scrollRestoration = 'auto';

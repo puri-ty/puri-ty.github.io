@@ -7,6 +7,7 @@ body {
     margin: 0;
     padding: 0;
 }
+
 .story-wrapper {
     position: fixed;
     top: 0;
@@ -37,10 +38,18 @@ h1 {
     font-size: 23px;
     text-align: left;
     color: white;;
-    width: 30%;
+    width: 40%;
+    padding-top: 10vh;
     overflow: scroll;
     scrollbar-width: none;
+    height: 80vh;
+    margin-top: 2rem;
+    -webkit-mask-image: -webkit-gradient(linear, left 80%, left top, from(black), to(transparent));
+    -webkit-mask-image: linear-gradient(to top, black 80%, transparent 100%);
+    mask-image: -webkit-gradient(linear, left 80%, left top, from(black), to(transparent));
 
+
+    mask-image: linear-gradient(to top, black 80%, transparent 100%);
 }
 
 .text::-webkit-scrollbar {
@@ -49,7 +58,7 @@ h1 {
 
 .story-wrapper.show {
     pointer-events: all;
-    opacity: 1!important;
+    opacity: 1 !important;
 }
 
 .close {
@@ -67,14 +76,23 @@ h1 {
 .close:hover {
     opacity: 0.5;
 }
-img{
+
+img {
     position: fixed;
-    top:0;
-    left:0;
-    width:100vw;
-    height:100vh;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
     object-fit: cover;
     object-position: center;
     z-index: 0;
-    opacity: 1; transition: opacity 0.5s;
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+p {
+    margin: 2rem;
+    font-weight: lighter;
+    line-height: 40px;
+
 }

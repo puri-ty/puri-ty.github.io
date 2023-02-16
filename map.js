@@ -49,7 +49,7 @@ const points = [
 ]
 for (let i = 0; i < points.length; i++) {
     let marker = L.marker(points[i].coords, {icon: customIcon}).addTo(map);
-    let curPoint =points[i];
+    let curPoint = points[i];
     marker.on("click", function (e) {
         window.location = curPoint.story;
         /*
@@ -75,15 +75,27 @@ let scroll = new LocomotiveScroll({
     el: document.getElementById('intro'),
     smooth: true
 });
-scroll.on('call', function () {
-        anime({
-            targets: '#titlecard',
-            strokeDashoffset: [anime.setDashoffset, 0],
-            easing: 'easeInOutSine',
-            duration: 10000,
-            delay: 1000,
-            direction: 'alternate',
-            loop: false
-        });
+scroll.on('call', function (f, dir) {
+        if (f === 'animateHeader') {
+            anime({
+                targets: '#titlecard',
+                strokeDashoffset: [anime.setDashoffset, 0],
+                easing: 'easeInOutSine',
+                duration: 10000,
+                delay: 1000,
+                direction: 'alternate',
+                loop: false
+            });
+        } else if(f==='showMap') {
+            document.getElementById('map').style.opacity = (dir === 'enter') ? '1' : '0';
+            document.querySelector('.circle').classList.toggle('show');
+        }
+        else if(f==='heroessquareFadeOut' && dir === 'enter') {
+            document.getElementById('heroessquare').classList.toggle('fade-out');
+        } else if(f==='heroessquare1FadeOut') {
+            document.getElementById('heroessquare1').classList.toggle('fade-out');
+        } else {
+            console.log(f);
+        }
     }
 );

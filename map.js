@@ -82,7 +82,7 @@ scroll.on('call', function (f, dir) {
                 strokeDashoffset: [anime.setDashoffset, 0],
                 easing: 'easeInOutSine',
                 duration: 10000,
-                delay: 1000,
+                delay: 700,
                 direction: 'alternate',
                 loop: false
             });

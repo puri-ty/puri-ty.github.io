@@ -30,7 +30,9 @@
         <div data-scroll data-scroll-speed="2" class="f130">რომ ყველაზე მოკლეა,</div>
     </div>
     <div class="section" data-scroll-section>
-        <div data-scroll data-scroll-repeat data-scroll-call="heroessquareFadeOut" class="f130 center">ლამაზი ხე გხვდება,</div>
+        <div data-scroll data-scroll-repeat data-scroll-call="heroessquareFadeOut" class="f130 center">ლამაზი ხე
+            გხვდება,
+        </div>
     </div>
     <div class="section" data-scroll-section>
         <div class="f130 center">რომელიღაც ფანჯრის რაფაზე
@@ -79,7 +81,7 @@
         <div data-scroll data-scroll-repeat data-scroll-call="showMap">
         </div>
     </div>
-    <button class="circle">
+    <button class="circle" title="დაამატე შენი ისტორია">
         <div class="line-wrapper">
             <div class="horizontal"></div>
             <div class="vertical"></div>
@@ -92,7 +94,16 @@
 <audio autoplay>
     <source src="sound.wav" type="audio/wav">
 </audio>
-<button style="position:fixed; top: 0; z-index: 2000;" onclick="toggleSound()">x</button>
+
+<button class="boxContainer" onclick="toggleSound()">
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+    <div class="box box4"></div>
+    <div class="box box5"></div>
+</button>
+
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.js"></script>
 <script src="locomotive-scroll.min.js"></script>
 <script src="map.js"></script>
